@@ -91,7 +91,7 @@ margin: auto;
 }
 
 #midpart1{
-    margin-top: 50px;
+    margin-top: 80px;
     width: 100%;
     border: 0.5px  rgb(51, 49, 49);
     display: flex;
@@ -121,17 +121,119 @@ margin: auto;
 }
 #brand1{
     display: flex;
-    margin-top: 50px;
+    margin-top: 80px;
     width: 100%;
     border: 1px solid black;
     display: flex;
-    height: 400px;
+    height: 350px;
 }
 .div{
     width: 40%;
     border: 1px solid black;
+  justify-content: center;
 }
 .div>img{
+    width: 90%;
+    
+}
+#carouselExampleControls{
+    border: 1px solid black;
+}
+.div>h2{
+    font-size: 80px;
+ 
+}
+#brand2{
+    display: flex;
+    /* margin-top: 50px; */
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    height: 350px;
+}
+
+#brand3{
+    display: flex;
+    /* margin-top: 50px; */
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    height: 350px;
+}
+
+.des{
+    display: flex;
+    border: 1px solid black;
+    width: 70%;
+    align-items: center;
+    padding: 20px;
+}
+#banner2{
+    display: flex;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 80px;
+   
+}
+.sign{
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #cafc4f;
+}
+#btn{
+    background-color: #cafc4f;
+    width: 30%;
+}
+#btn:hover{
+    background-color: lightblue;
+}
+.sign:hover{
+    background-color: lightblue;
+
+}
+.text>h1{
+    font-size: 100px;
+    font-weight: bold;
+
+}
+.text{
+    width: 100%;
+    padding: 20px;
+}
+.join>a{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #faf0f0; 
+    background-color: black;
+    width: 250px;
+}
+#most{
+    display: flex;
+    margin: 20px;
+    padding-top: 60px;
+    align-items: center;
+}
+.line{
+    display: flex;
+    gap: 70px;
     width: 100%;
 }
-.div>h2
+.t1{
+    writing-mode: vertical-lr;
+    font-size: 80px;
+  
+    align-items: center;
+    
+}
+.line>div{
+    text-align: center;
+    padding: 20px;
+    width: 40%;
+}
+.line>div>h5:hover{
+    color: blue;
+}

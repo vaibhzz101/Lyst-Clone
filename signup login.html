@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style/login.css">
+    <title>Sign Up</title>
+    
+  </head>
+  <body>
+    
+    <!-- <!-**********NAVBAR******************************************************************************************************--/> -->
+    <div id="navbar">
+        <div id="logo">
+            <a href="./index.html"> <img src="C:\Users\Asus\Desktop\my proje\gabby-squirrel-8633\Image\Yellow E-commerce Shop Bag Store Logo.png" alt="LYST"></a>
+
+        </div>
+        <div id="menu">
+            <a href="./men.html">Men</a>
+        <a href="./women.html">Women</a>
+        </div>
+
+        <div id="srch">
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+            <input type="text" placeholder="SEACRH (E.G 'ACNE JEANS')" id="search" />
+
+        </div>
+        
+        <div class="btns">
+            <button>Sign Up</button>
+            <button>Sign In</button>
+        </div>
+    </div>
+    <!-- <!-**********NAVBAR******************************************************************************************************--/> -->
+
+
+    <div id="container">
+      
+      <form id="signUp">
+        <h1>The Only Fashion Site you Need </h1>
+        <h3>Register Here !</h3>
+        <input type="text" id="name" placeholder="Name" required />
+        <br />
+        <input type="email" id="email" placeholder="E-mail" required />
+        <br />
+        <input type="password" id="password" placeholder="Password" required />
+        <br />
+        <input
+          type="password"
+          id="passwordChk"
+          placeholder="Re-enter Password"
+          required
+        />
+        <br />
+        <input type="submit" />
+      </form>
+      <form id="signIn">
+        <h1>Sign In to Your Account!</h1>
+        <input type="email" id="email1" placeholder="E-mail" required />
+        <br />
+        <input type="pa" id="password1" placeholder="Password" required />
+        <br />
+        <input type="submit" />
+      </form>
+    </div>
+
+
+<!-- *********************************************************************************************************************************** -->
+<hr>
+    <div id="footer"><hr>
+        <div class="foot1"> 
+            <img src="C:\Users\Asus\Desktop\my proje\gabby-squirrel-8633\Image\Annotation 2022-12-15 142819.png" alt="">
+            <p>Learn about the Lyst app for iPhone, iPad and Android</p>
+            <p>@ 2022 Lyst</p>
+        </div>
+        <div class="foot2">
+            <div class="hel">
+                <h3>INTERNATIONAL</h3>
+                 <p>Lyst - AU</p>
+                 <p>Lyst - CA</p>
+                 <p>Lyst - UK</p>
+                 <p>Lyst - Österreich</p>
+                 <p>Lyst - Schweiz</p>
+                 <p>Lyst - Deutschland</p>
+                 <p>Lyst - España</p>
+                 <p>Lyst - France</p>
+                 <p>Lyst - Italia</p>
+                 <p>Lyst - 日本</p>
+                 <p>Lyst - België</p>
+                 <p>Lyst - Nederland</p>
+            </div>
+            <div class="hel">
+                <h3>HELP AND INFO</h3>
+                 <p>Help center<p>
+                 <p>About us</p>
+                 <p>Shipping us</p>
+                 <p>Returns policy</p>
+                 <p>Developers</p>
+                 <p>Careers</p>
+                 <p>Contact</p>
+                 <p>Terms & Conditions</p>
+                 <p>Privacy & cookie policy</p>
+                 <p>Intellectual property</p>
+                 <p>Categories</p>
+                 <p>Become a partner</p>
+                 <p>Lyst insights</p>
+                 <p>Lyst News</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+  </body>
+</html>
+<script>
+  let loginBtn = document.querySelector("div>button:nth-child(2)");
+  let signUpBtn = document.querySelector("div>button:nth-child(1)");
+  let signIn = document.querySelector("#signIn");
+  let signUp = document.querySelector("#signUp");
+
+  // we need to catch the users data file from localstorage.
+  let users = JSON.parse(localStorage.getItem("usersData")) || [];
+
+  // by default We want the signIn form to be hidden.
+  signIn.style.display = "none";
+
+  loginBtn.addEventListener("click", function () {
+    signUp.style.display = "none";
+    // we can use any display property to show the element in place of block (grid, flex,inline, block)
+    // generally we use block because we don't want to change our display style.
+    signIn.style.display = "block";
+    //    we change the document title using title method
+    document.title = "Sign In";
+  });
+  signUpBtn.addEventListener("click", function () {
+    signIn.style.display = "none";
+    signUp.style.display = "block";
+    document.title = "Sign Up";
+  });
+
+  signUp.addEventListener("submit", function (event) {
+    // we preventDefault() to stop page from refreshing
+    event.preventDefault();
+    // we check whether the email is in our database or not
+    let count = 0;
+    users.forEach(function (el) {
+      if (el.email === signUp.email.value) {
+        count++;
+      }
+    });
+    // if we found a user we alert
+    if (count > 0) {
+      alert("user already registered!");
+    }
+    // if users not found || email not found 
+    else {
+        // we are checking if both passwords are same or not.
+      if (signUp.password.value != signUp.passwordChk.value) {
+        alert("passwords do not match!");
+      } else {
+        // we create an obj to store data of the user
+        let user = {
+          name: signUp.name.value,
+          email: signUp.email.value,
+          password: signUp.password.value,
+        };
+        // we push this object into users array
+        users.push(user);
+        // we store the array in localstorage
+        localStorage.setItem("usersData", JSON.stringify(users));
+        alert("Sign Up successful!");
+
+        // to reset all the input fields of a form we can use reset() method
+        signUp.reset();
+      }
+    }
+  });
+
+  signIn.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let count = 0;
+    // we are creating a temp var to store user who is trying to login
+    let temp;
+    // we are checking whether the user is registered or not
+    users.forEach(function (el) {
+      if (el.email === signIn.email1.value) {
+        count++;
+        // when count is incremented or we found user, we are storing the user data;
+        temp = el;
+        // we are storing the user in our local storage so that we can access user data from different pages
+        localStorage.setItem('loggedUser',JSON.stringify(el));
+      }
+    });
+    // if we didn't find any user we alert
+    if (count == 0) {
+      alert("user not registered!");
+    }
+    // if we find user we check the password
+     else {
+        // we check the temp password with form password
+      if (temp.password != signIn.password1.value) {
+        alert("wrong password");
+      } else {
+        alert("login successful!");
+        // we can use n number of methods to change the page. here we are using assign() method
+        // window.location.assign('url')
+       window.location.assign("./index2.html")
+      }
+    }
+  });
+</script>

@@ -5,9 +5,15 @@
 #navbar{
     display: flex;
     padding: 10px;
+    top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+position: sticky;
+height: 100px;
+background-attachment: fixed;
 
     align-items: center;
     /* justify-content:space-between; */
+    background-color: white;
 }
 
 
@@ -51,7 +57,7 @@
     font-size: 20px;
 }
 img{
-   width: 170px; 
+   width: 100px; 
 }
 #navbar>div:nth-child(4)>a{
     text-decoration: none;
@@ -66,7 +72,7 @@ img{
 #srch{
     width: 900px;
     height: 50px;
-    background-color: white;
+    
 }
 #navbar>div:nth-child(4){
    
@@ -236,4 +242,50 @@ margin: auto;
 }
 .line>div>h5:hover{
     color: blue;
+}
+#last{
+    display: flex;
+    height: 500px;
+    border: 1px solid black;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.te{
+    writing-mode: vertical-rl;
+}
+.divs{
+    display: flex;
+}
+.te:hover{
+ color: blue;   
+}
+
+
+.pe>p:hover{
+    font-weight: bold;
+}
+#footer{
+    display: flex;
+    padding-top: 50px;
+    height: 300px;
+}
+.foot2{
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.foot1{
+    width: 100%;
+    padding: 20px;
+    margin-left: 50px;
+
+}
+.hel{
+    
+    padding: 20px;
+
+}
+.foot1>img{
+    width: 300px;
 }

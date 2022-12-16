@@ -1,4 +1,7 @@
-
+*{
+    margin: 0px;
+    padding: 0px;
+}
 #logo{
     margin-left: 20px;
 }
@@ -71,7 +74,7 @@ img{
 } */
 #srch{
     width: 900px;
-    height: 50px;
+    height: 40px;
     
 }
 /* #navbar>div:nth-child(4){
@@ -104,15 +107,17 @@ margin: auto;
     align-items: center;
         
       }
-.btnss>button{
+.btnss>a{
         background-color: black;
         width: 100px;
-      
+      text-decoration: none;
         color: antiquewhite;
+        text-align: center;
+        border-radius: 5px;
 }
-#ban>div>h1{
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#ban>div>h5{
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 #midpart1{
     margin-top: 80px;
@@ -264,7 +269,7 @@ margin: auto;
 #last{
     display: flex;
     height: 500px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding-top: 100px;
     padding-bottom: 50px;
 }

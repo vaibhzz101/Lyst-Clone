@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your World of Fashion | LYST</title>
+  <link rel="stylesheet" href="style/wcloth.css">
+  
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous"> -->
+</head>
+
+<body>
+
+    <!-- <!-**********NAVBAR***************--/> -->
+    <div id="navbar">
+        <div id="logo">
+            <a href="./index.html"> <img src="C:\Users\Asus\Desktop\my proje\gabby-squirrel-8633\Image\Yellow E-commerce Shop Bag Store Logo.png" alt=""></a>
+
+        </div>
+        <div id="menus">
+            <a href="./men.html">Men</a>
+        <a href="./women.html">Women</a>
+        </div>
+
+        <div id="srch">
+   
+
+            <input type="text" placeholder="SEACRH (E.G 'ACNE JEANS')" id="search" />
+
+        </div>
+        
+        <div id="ban">
+            <div>
+                <h5 style="height: 20px; padding-top: 20px; padding-left: 20px; margin: auto;">Welcome <span></span></h5>
+              </div>
+              <div class="btnss">
+               <a href="./signup login.html">Log Out</a>
+                <a href="./fav.html">Fav ❤️</a>
+              </div>
+        </div>
+    </div>
+    <hr>
+
+
+  <!-- <!-********************************************************************************************************--/> -->
+  <div class="menu">
+    <ul>
+        <li><a href="#"> Clothing </a>
+          <div class="submenu">
+
+            <ul >
+                <li><a href="#"></a>All Clothing</li>
+                <li><a href="#"></a>Coats</li>
+                <li><a href="#"></a>Jackets</li>
+                <li><a href="#"></a>Jeans</li>
+            </ul>
+          </div>
+        
+        
+        </li>
+        <li><a href="#">Shoes</a>
+        <div class="submenu">
+
+            <ul >
+                <li><a href="#"></a>All Shoes</li>
+                <li><a href="#"></a>Boots</li>
+                <li><a href="#"></a>Heels</li>
+                <li><a href="#"></a>Sneakers</li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Accessories</a>
+        <div class="submenu">
+
+            <ul >
+                <li><a href="#"></a>All Accessories</li>
+                <li><a href="#"></a>Belts</li>
+                <li><a href="#"></a>Sunglasses</li>
+                <li><a href="#"></a>Umbrellas</li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Bags</a>
+        <div class="submenu">
+
+            <ul >
+                <li><a href="#"></a>All Bags</li>
+                <li><a href="#"></a>Gym Bags</li>
+                <li><a href="#"></a>Cases</li>
+                <li><a href="#"></a>Laptop Bags</li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Jewelry</a>
+        <div class="submenu">
+
+            <ul >
+                <li><a href="#"></a>All Jewelry</li>
+                <li><a href="#"></a>Bracelets</li>
+                <li><a href="#"></a>Rings</li>
+                <li><a href="#"></a>Necklace</li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">All Women's</a>
+        <div class="submenu">
+
+            <ul >
+                <li><a href="#"></a>All Clothing</li>
+                <li><a href="#"></a>All Shoes</li>
+                <li><a href="#"></a>All Accessories</li>
+                <li><a href="#"></a>All Shoes</li>
+                <li><a href="#"></a>All Bags</li>
+                <li><a href="#"></a>All Jewelry</li>
+
+            </ul>
+          </div>
+        </li>
+    </ul>
+  </div>
+  <hr>
+  <div id="product-container">
+    
+    <!-- Here Append All the Products  -->
+  </div>
+
+  </body>
+  </html>
+  <script >
+
+
+
+ let productData = [
+      {
+         id:1,
+         image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/vitkac/6d04b6f0/adidas-originals-BLACK-Dress-With-Logo.jpeg",
+        name: "Dress with logo-Black",
+        price: "1170",
+        strikedoffprice: "2599",
+      },
+      { id:2,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/ruelala/aba70113/burberry-Black-Diamond-Quilted-Jacket.jpeg",
+        name: "Diaomond Quilted Jacket-Blue",
+        price: 699,
+        strikedoffprice: 999,
+      },
+      { id:3,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/forwardforward/bd20284d/moncler-Black-Matt-Clair-Jacket.jpeg",
+        name: "Matt Clair Jacket-Black",
+        price: 945,
+        strikedoffprice: 2099,
+      },
+      {
+         id:5,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/gilt/cab0f5a4/canada-goose-Grey-Elrose-Down-Parka.jpeg",
+        name: "Elrose Down Parka-Gray",
+        price: 399,
+        strikedoffprice: 799,
+      },
+      { id:6,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/lvr/61668a2c/nike-black-Pantalon-Utilitaire-En-Nylon-Jordan.jpeg",
+          name: "Nylon Utility Pants",
+        price: 1620,
+        strikedoffprice: 3599,
+      },
+      {
+         id:7,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/cettire/34482361/burberry-Brown-Classic-Double-breasted-Trench-Coat.jpeg",
+        name: "Trench coat",
+        price: 1440,
+        strikedoffprice: 3199,
+      },
+      { id:8,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/lvr/5afd8ada/nike-Black-Faux-Shearling-Down-Jacket.jpeg",
+        name: "faux Shearing Down Jacket-Black ",
+        price: 1999,
+        strikedoffprice: 3199,
+      },
+      {
+         id:9,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/dolcegabbana/211d9e22/dolce-gabbana-Multicolor-Calendar-print-Poplin-Corset.jpeg",
+        name: "print popplin corset",
+        price: 769,
+        strikedoffprice: 1099,
+      },
+      {
+         id:10,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/gilt/c4098cb2/burberry-Beige-Diamond-Quilted-Thermoregulated-Jacket.jpeg",
+        name: "Quilted Jacket",
+        price: 1299,
+        strikedoffprice: 1440,
+      },
+      {
+         id:11,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/mytheresa/b3ca6b2c/norma-kamali-black-Obie-Velvet-Gown.jpeg",
+        name: "Velvet Gown",
+        price: 699,
+        strikedoffprice: 999,
+      },
+      {
+         id:12,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/revolveclothing/2686298d/bcbgmaxazria-Black-ROBE-DE-SOIREE.jpeg",
+        name: "Corset Gown",
+        price: 1620,
+        strikedoffprice: 3599,
+      },
+      {
+         id:13,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/3c72f78d/juicy-couture-Vixen-Pink-Velvet-Cropped-Zip-Up-Hoodie.jpeg",
+        name: "Velvet Gown ",
+        price: 1620,
+        strikedoffprice: 3599,
+      },
+      {
+         id:14,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/0fab5a76/max-studio-Navy-Print-Tiered-Midi-Dress.jpeg",
+        name: "Print Midi Dress",
+        price: 599,
+        strikedoffprice: 999,
+      },
+      {
+         id:15,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/gilt/ceb4972a/nike-Blue-Standard-Fit-Windrunner-Tech-Fleece.jpeg",
+        name: " Std ft Widrunner",
+        price: 1575,
+        strikedoffprice: 3499,
+      },
+      { id:16,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/ff63ac3c/calvin-klein-Red-Belted-Sweater-Dress.jpeg",
+        name: "Belted Sweater Dress-Red",
+        price: 9999,
+        strikedoffprice: 12000,
+      },
+      {
+         id:17,
+        image_url:
+          "https://cdna.lystit.com/200/250/tr/photos/gilt/4531fa1c/all-saints-Black-Lucie-Puffer-Coat.jpeg",
+        name: "Puffer Coat",
+        price: 779,
+        strikedoffprice: 1299,
+      },
+   ];
+
+   localStorage.setItem("product", JSON.stringify(productData))
+   let storedProd = JSON.parse(localStorage.getItem("product"))
+   console.log(storedProd)
+
+   storedProd.forEach((element) => {
+    let parent = document.querySelector("#product-container");
+      let card = document.createElement("div")
+      let img = document.createElement("img")
+      img.setAttribute("src",element.image_url)
+      let name = document.createElement("h2")
+      name.textContent= element.name;
+      let price = document.createElement("h3")
+      price.textContent = element.price;
+      // let stprice = document.createElement("p")
+      // stprice.textContent = element.strikedoffprice;
+  
+      let cartBtn = document.createElement("button");
+      cartBtn.textContent = "Add to Favorite ❤️";
+       cartBtn.addEventListener("click", function(){
+        let cart = JSON.parse(localStorage.getItem("cart"))||[];
+  
+        let alreadyincart = false;
+        for(let i=0; i<cart.length; i++){
+          if(cart[i].id===element.id){
+            alreadyincart=true;
+            break;
+          }
+        }
+        if(alreadyincart === true){
+          alert("Product already in Favorites")
+  
+        }
+        else{
+          cart.push({...element,quantity:1})
+          alert("product added in Favorites")
+  
+          localStorage.setItem("cart",JSON.stringify(cart));
+        
+        }
+        
+      })
+      card.append(img,name,price,cartBtn)
+      parent.append(card)
+    
+   });
+      
+     
+
+    // *************************************************************************************************************
+     let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+  document.querySelector("div>h5>span").textContent =
+    loggedUser.name;
+
+ let lgout = document.getElementsByClassName("b1")
+ lgout.addEventListener("click", function(){
+    window.location.assign("./signup login.html")
+ })
+  </script>

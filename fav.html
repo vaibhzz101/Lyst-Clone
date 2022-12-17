@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your World of Fashion | LYST</title>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+#logo{
+    margin-left: 20px;
+}
+#navbar{
+    display: flex;
+    padding: 10px;
+    top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+position: sticky;
+height: 100px;
+background-attachment: fixed;
+
+    align-items: center;
+    /* justify-content:space-between; */
+    background-color: white;
+}
+
+
+#navbar>div:nth-child(2){
+    display: flex;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    justify-content:space-evenly ;
+    align-items: center;
+
+}
+#navbar>div:nth-child(2)>a{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #474747; 
+}
+#navbar>div:nth-child(2)>a:after{
+ content: "";
+ position: absolute;
+ background-color: black;   
+ height: 3px;
+ width: 0%;
+ left: 0;
+ bottom: -10px;
+ transition: 0.3s;
+}
+#navbar>div:nth-child(2)>a:hover::after{
+    width: 100%;
+}#navbar>div:nth-child(2)>a:hover{
+    color:black;
+    font-weight: bold;
+}
+#navbar>div:nth-child(3)>input{
+    width: 780px;
+    height: 50px;
+    font-size: 20px;
+}
+img{
+   width: 100px; 
+}
+/* #navbar>div:nth-child(4)>a{
+    text-decoration: none;
+
+    color: white;
+    border-radius: 5px;
+
+    width: 140px;
+   
+  
+} */
+#srch{
+    width: 900px;
+    height: 40px;
+    
+}
+.btnss{
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    align-items: center;
+        
+      }
+.btnss>a{
+    background-color: rgb(230, 23, 58);
+border: rgb(230, 23, 58);
+color: white;
+font-family:cursive;
+
+        width: 150px;
+      text-decoration: none;
+       
+        text-align: center;
+        border-radius: 5px;
+}
+
+#fav-container{
+    margin-top: 50px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    justify-content: center;
+}
+#fav-container > div{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 10px;
+    gap: 10px;
+    
+}
+
+img{
+    width: 40%;
+}
+button{
+    width: auto;
+   margin: auto;
+    gap: 10px;
+    
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- <!-**********NAVBAR***************--/> -->
+    <div id="navbar">
+        <div id="logo">
+            <a href="./index.html"> <img src="C:\Users\Asus\Desktop\my proje\gabby-squirrel-8633\Image\Yellow E-commerce Shop Bag Store Logo.png" alt=""></a>
+
+        </div>
+        <div id="menu">
+            <a href="./men.html">Men</a>
+        <a href="./women.html">Women</a>
+        </div>
+
+        <div id="srch">
+   
+
+            <input type="text" placeholder="SEACRH (E.G 'ACNE JEANS')" id="search" />
+
+        </div>
+        <div class="btnss">
+        
+             <a href="./fav.html">FAVORITE...❤️</a>
+           </div>
+        </div>
+        <!-- **************************************************************************************************************** -->
+        <h1 id="total">Your a total <span id="fav-total">0</span> Products in the favourites</h1>
+        <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+        <div id="fav-container">
+          <!-- Here Append All the Favourites-->
+        </div>
+        </body>
+        </html>
+        <script>
+             let favcount = document.getElementById("fav-total")
+             let total = document.getElementById("cart-total")
+              let cartdata = JSON.parse(localStorage.getItem("cart")) || []
+displayData(cartdata)
+
+function displayData(data){
+      favcount.textContent=data.length;
+
+    let parent = document.getElementById("fav-container")
+    parent.innerHTML=null;
+
+    total.textContent = data.reduce((a,b) =>{
+        return a + Number(b.price) * b.quantity
+      }, 0);
+    
+    data.forEach((element,i) => {
+
+      let card=document.createElement("div")
+
+   
+      let img = document.createElement("img")
+      img.setAttribute("src",element.image_url)
+
+      let name = document.createElement("h2")
+      name.textContent= element.name;
+
+      let price = document.createElement("h3")
+      price.textContent = element.price;
+
+      let increment = document.createElement("button");
+        increment.textContent="+";
+
+        increment.addEventListener("click", function(){
+          cartdata[i].quantity++;
+         localStorage.setItem("cart", JSON.stringify(cartdata))
+   
+          displayData(cartdata)
+
+   });
+
+    let quantity = document.createElement("span");
+    quantity.textContent=element.quantity;
+
+    let decrement = document.createElement("button");
+   decrement.textContent="-";
+
+
+   decrement.addEventListener("click", function(){
+      if(element.quantity <=1) return;
+     
+      cartdata[i].quantity--;
+        localStorage.setItem("cart",JSON.stringify(cartdata))
+   displayData(cartdata)
+      
+    })
+
+      let del = document.createElement("button")
+      del.textContent="Delete";
+
+      del.addEventListener("click", function(){
+        cartdata= cartdata.filter(function(el){
+          return el.id != element.id;
+        })
+        localStorage.setItem("cart", JSON.stringify(cartdata));
+        displayData(cartdata)
+      })
+
+     
+
+      card.append(img,name,price,increment,quantity,decrement, del)
+      parent.append(card)
+      
+    });
+  }
+
+
+        </script>
+    

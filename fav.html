@@ -131,7 +131,25 @@ button{
     gap: 10px;
     
 }
+.order>a{
+    text-decoration: none;
+    background-color: rgb(14, 2, 4);
+border: rgb(14, 2, 4);
+color: white;
+font-family:cursive;
+width: 200px;
+height: 30px;
 
+
+}
+.order{
+    text-align:left;
+    margin-left: 40px;
+}
+.order>a:hover{
+    background-color: palevioletred;
+    color: black;
+}
 </style>
 </head>
 
@@ -162,6 +180,7 @@ button{
         <!-- **************************************************************************************************************** -->
         <h1 id="total">Your a total <span id="fav-total">0</span> Products in the favourites</h1>
         <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+        <div class="order"><a href="./payment.html">Buy Your Order</a></div>
         <div id="fav-container">
           <!-- Here Append All the Favourites-->
         </div>
@@ -171,6 +190,7 @@ button{
              let favcount = document.getElementById("fav-total")
              let total = document.getElementById("cart-total")
               let cartdata = JSON.parse(localStorage.getItem("cart")) || []
+
 displayData(cartdata)
 
 function displayData(data){

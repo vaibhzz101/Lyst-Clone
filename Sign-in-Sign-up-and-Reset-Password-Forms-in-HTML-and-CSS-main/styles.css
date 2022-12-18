@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+:root {
+  --bg-clr: #d9e5f1;
+  --white: #fff;
+  --primary-clr: #222222;
+  --secondary-clr: #929292;
+  --border-clr: #e0e0e0;
+  --link-clr: #6c8db8;
+  --btn-hvr: #525050;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  user-select: none;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: var(--bg-clr);
+  font-size: 14px;
+  color: var(--secondary-clr);
+}
+
+.wrapper{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,0%);
+}
+
+.form_wrapper{
+  display: flex;
+}
+
+.form_wrapper .form_ele{
+  width: 425px;
+  max-width: 100%;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 3px;
+}
+
+.form_wrapper .form_ele:not(:last-child){
+  margin-right: 30px;
+}
+
+.form_wrapper .form_ele .img_section{
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.form_wrapper .form_ele .img_section img{
+  width: 150px;
+}
+
+.form_wrapper .form_ele .title p{
+  color: var(--primary-clr);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.form_wrapper .form_ele form{
+  height: calc(100% - 214px);
+}
+
+.form_wrapper .form_ele form .form_grp{
+  height: calc(100% - 54px);
+}
+
+.form_wrapper .form_ele .form_head {
+    height: calc(100% - 38px);
+}
+
+.form_wrapper .form_ele .form_item,
+.form_wrapper .form_ele .form_info{
+  margin-bottom: 15px;
+}
+
+.form_wrapper .form_ele .form_item .label{
+  margin-bottom: 10px;
+}
+
+.form_wrapper .form_ele .form_item .input{
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1.5px solid var(--border-clr);
+  transition: all 0.5s ease;
+}
+
+.form_wrapper .form_ele .form_item .input:focus{
+  border-color: var(--primary-clr);
+}
+
+.form_wrapper .form_ele .form_info a{
+  transition: all 0.5s ease;
+  color: var(--link-clr);
+}
+
+.form_wrapper .form_ele .form_info a:hover{
+  color: var(--primary-clr);
+}
+
+.form_wrapper .form_ele button{
+  background: var(--primary-clr);
+  color: var(--white);
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.form_wrapper .form_ele button:hover{
+  background: var(--btn-hvr);
+}

@@ -75,18 +75,21 @@ img{
     
 }
 #navbar>div:nth-child(4){
-   
+   margin-right: 40px;
    
     height: 35px;
     width: 150px;
     text-align: center;
-    font-size: 20px;
-    border-radius: 5px;
+    font-size: 15px;
+    border-radius: 2px;
     justify-content:space-evenly ;
     align-items: center;
     background-color: black;
 margin: auto;
     justify-content: space-between;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 #navbar>div:nth-child(4)>a:hover{
     color:lightgray;
@@ -246,7 +249,7 @@ margin: auto;
 #last{
     display: flex;
     height: 500px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding-top: 100px;
     padding-bottom: 50px;
 }
